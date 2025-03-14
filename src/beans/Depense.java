@@ -4,25 +4,26 @@ import java.util.Date;
 
 public class Depense {
     private String libelle;
-    private double montant;
     private Date date;
+    private double montant;
+    private Etudiant etudiant;
 
-    public Depense(String libelle, double montant, Date date) {
+    public Depense(String libelle, Date date, double montant, Etudiant etudiant) {
         this.libelle = libelle;
-        this.montant = montant;
         this.date = date;
-    }
-
-    public Depense(String libelle, double montant, Date date) {
-        this.libelle = libelle;
         this.montant = montant;
-        this.date = date;
+        this.etudiant = etudiant;
     }
 
     public String getLibelle() { return libelle; }
     public void setLibelle(String libelle) { this.libelle = libelle; }
-    public double getMontant() { return montant; }
-    public void setMontant(double montant) { this.montant = montant; }
+
     public Date getDate() { return date; }
     public void setDate(Date date) { this.date = date; }
+
+    public double getMontant() { return montant; }
+    public void setMontant(double montant) { this.montant = montant; }
+
+    public Etudiant getEtudiant() { return etudiant; }
+    public void setEtudiant(Etudiant etudiant) { this.etudiant = etudiant; }
 }
