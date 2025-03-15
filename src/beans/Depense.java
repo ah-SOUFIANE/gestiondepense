@@ -3,27 +3,30 @@ package beans;
 import java.util.Date;
 
 public class Depense {
+    private int id;
     private String libelle;
-    private Date date;
     private double montant;
-    private Etudiant etudiant;
+    private Date date;
 
-    public Depense(String libelle, Date date, double montant, Etudiant etudiant) {
+    public Depense(int id, String libelle, double montant, Date date) {
+        this.id = id;
         this.libelle = libelle;
-        this.date = date;
         this.montant = montant;
-        this.etudiant = etudiant;
+        this.date = date;
     }
 
+    public Depense(String libelle, double montant, Date date) {
+        this.libelle = libelle;
+        this.montant = montant;
+        this.date = date;
+    }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
     public String getLibelle() { return libelle; }
     public void setLibelle(String libelle) { this.libelle = libelle; }
-
-    public Date getDate() { return date; }
-    public void setDate(Date date) { this.date = date; }
-
     public double getMontant() { return montant; }
     public void setMontant(double montant) { this.montant = montant; }
-
-    public Etudiant getEtudiant() { return etudiant; }
-    public void setEtudiant(Etudiant etudiant) { this.etudiant = etudiant; }
+    public Date getDate() { return date; }
+    public void setDate(Date date) { this.date = date; }
 }
