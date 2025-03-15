@@ -22,7 +22,7 @@ public class DepenseService implements IDao<Depense> {
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.out.println("❌ Erreur lors de l'ajout de la dépense : " + ex.getMessage());
+            System.out.println(" Erreur lors de l'ajout de la dépense : " + ex.getMessage());
         }
         return false;
     }
@@ -35,7 +35,7 @@ public class DepenseService implements IDao<Depense> {
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.out.println("❌ Erreur lors de la suppression de la dépense : " + ex.getMessage());
+            System.out.println("Erreur lors de la suppression de la dépense : " + ex.getMessage());
         }
         return false;
     }
@@ -51,7 +51,7 @@ public class DepenseService implements IDao<Depense> {
             ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
-            System.out.println("❌ Erreur lors de la mise à jour de la dépense : " + ex.getMessage());
+            System.out.println("Erreur lors de la mise à jour de la dépense : " + ex.getMessage());
         }
         return false;
     }
@@ -66,7 +66,7 @@ public class DepenseService implements IDao<Depense> {
                 return new Depense(rs.getInt("id"), rs.getString("libelle"), rs.getDouble("montant"), rs.getDate("date"));
             }
         } catch (SQLException ex) {
-            System.out.println("❌ Erreur lors de la récupération de la dépense : " + ex.getMessage());
+            System.out.println("Erreur lors de la récupération de la dépense : " + ex.getMessage());
         }
         return null;
     }
